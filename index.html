@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn 214 Chinese Radicals</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>漢</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">漢字</span>
+                    <span class="ml-2 text-lg font-medium text-gray-700">214 Chinese Radicals</span>
+                    
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-4">
+                        <button onclick="showSection('home')" class="nav-btn text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</button>
+                        <button onclick="showSection('radicals')" class="nav-btn text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Radicals</button>
+                        <button onclick="showSection('quiz')" class="nav-btn text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Quiz</button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                <button onclick="showSection('home')" class="nav-btn block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors">Home</button>
+                <button onclick="showSection('radicals')" class="nav-btn block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors">Radicals</button>
+                <button onclick="showSection('quiz')" class="nav-btn block text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors">Quiz</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home-section" class="section-content">
+        <!-- Hero Section -->
+        <div class="gradient-bg text-white py-20 mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                    Learn 214 Chinese Radicals
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto animate-fade-in">
+                    Master the fundamental building blocks of Chinese characters and unlock your understanding of the Chinese language.
+                </p>
+                <button onclick="showSection('radicals')" class="bg-white text-indigo-600 font-semibold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-colors transform hover:scale-105 animate-fade-in">
+                    Start Learning
+                </button>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Learn Chinese Radicals?</h2>
+                    <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
+                        Chinese radicals are the fundamental components that make up Chinese characters. Understanding radicals will help you recognize patterns, remember characters more easily, and understand the meaning of unfamiliar words.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 card-hover bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Better Memory</h3>
+                        <p class="text-gray-600">Break down complex characters into manageable components for easier memorization.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 card-hover bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                        <div class="text-4xl mb-4">🔍</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Pattern Recognition</h3>
+                        <p class="text-gray-600">Identify common patterns and structures in Chinese writing system.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 card-hover bg-gradient-to-br from-green-50 to-teal-50 rounded-xl">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Faster Learning</h3>
+                        <p class="text-gray-600">Accelerate your Chinese learning by understanding character construction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">App Features</h2>
+                    <p class="text-xl text-gray-600">Everything you need to master Chinese radicals</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="text-3xl mb-4">📚</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">214 Radicals</h3>
+                        <p class="text-gray-600">Complete collection of all traditional Chinese radicals with detailed information.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="text-3xl mb-4">🎯</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Interactive Quiz</h3>
+                        <p class="text-gray-600">Test your knowledge with randomized quizzes and track your progress.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="text-3xl mb-4">🔊</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Audio Pronunciation</h3>
+                        <p class="text-gray-600">Listen to correct pinyin pronunciation using text-to-speech technology.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="text-3xl mb-4">🔍</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Search</h3>
+                        <p class="text-gray-600">Quickly find radicals by character, meaning, or pronunciation.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="text-3xl mb-4">📱</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Responsive Design</h3>
+                        <p class="text-gray-600">Works perfectly on all devices - desktop, tablet, and mobile.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="text-3xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Fast & Offline</h3>
+                        <p class="text-gray-600">Lightning-fast loading with offline capability after first visit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="text-3xl mb-4">漢字</div>
+                <h3 class="text-xl font-semibold mb-2">Learn 214 Chinese Radicals</h3>
+                <p class="text-gray-400 mb-6">Built with ❤️ for Chinese language learners worldwide</p>
+                <div class="text-sm text-gray-500">
+                    <p>© 2024 Learn Chinese Radicals. Educational project for language learning.</p>
+                    <p class="mt-2">Made with HTML, CSS, JavaScript, and TailwindCSS</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Radicals List Section -->
+    <section id="radicals-section" class="section-content hidden">
+        <div class="pt-20 pb-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Chinese Radicals</h1>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Explore the 214 traditional Chinese radicals. Click on any radical to see more details and examples.
+                    </p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="mb-8">
+                    <div class="max-w-md mx-auto">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="search-input" 
+                                placeholder="Search by hanzi, name, meaning, or pinyin..." 
+                                class="w-full pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 transition-colors"
+                            >
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radicals Grid -->
+                <div id="radicals-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 auto-rows-fr">
+                    <!-- Radicals will be loaded here -->
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading" class="text-center py-12">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+                    <p class="mt-2 text-gray-600">Loading radicals...</p>
+                </div>
+
+                <!-- No Results State -->
+                <div id="no-results" class="text-center py-12 hidden">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">No radicals found</h3>
+                    <p class="text-gray-600">Try adjusting your search terms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="section-content hidden">
+        <div class="pt-20 pb-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Quiz Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Radicals Quiz</h1>
+                    <p class="text-xl text-gray-600">
+                        Test your knowledge of Chinese radicals with this interactive quiz!
+                    </p>
+                </div>
+
+                <!-- Quiz Start Screen -->
+                <div id="quiz-start" class="text-center">
+                    <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+                        <div class="text-6xl mb-6">🎯</div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Test Your Knowledge?</h2>
+                        <p class="text-gray-600 mb-8">
+                            You'll be shown 10 random radicals. For each one, identify the correct meaning from 4 options.
+                        </p>
+                        <button onclick="startQuiz()" class="gradient-bg text-white font-semibold py-3 px-8 rounded-lg text-lg hover:opacity-90 transition-opacity transform hover:scale-105">
+                            Start Quiz
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Questions -->
+                <div id="quiz-questions" class="hidden">
+                    <!-- Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium text-gray-700">Question <span id="current-question">1</span> of 10</span>
+                            <span class="text-sm font-medium text-gray-700">Score: <span id="current-score">0</span>/10</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="progress-bar" class="gradient-bg h-2 rounded-full transition-all duration-500" style="width: 10%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question Card -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center mb-8">
+                        <div class="hanzi-large mb-6" id="question-hanzi">一</div>
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-6">What is the meaning of this radical?</h2>
+                        
+                        <!-- Options -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="quiz-options">
+                            <!-- Options will be generated here -->
+                        </div>
+
+                        <!-- Next Button -->
+                        <button id="next-btn" onclick="nextQuestion()" class="hidden mt-6 bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
+                            Next Question
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results -->
+                <div id="quiz-results" class="hidden text-center">
+                    <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+                        <div id="results-emoji" class="text-6xl mb-6">🎉</div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Quiz Complete!</h2>
+                        <div class="text-4xl font-bold gradient-text mb-6" id="final-score">8/10</div>
+                        <p id="score-message" class="text-xl text-gray-600 mb-8">Great job! You have a solid understanding of Chinese radicals.</p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button onclick="startQuiz()" class="gradient-bg text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity">
+                                Try Again
+                            </button>
+                            <button onclick="showSection('radicals')" class="bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors">
+                                Study Radicals
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Radical Details -->
+    <div id="radical-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-xl max-w-md w-full p-6 transform transition-all">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Radical Details</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            </div>
+            
+            <div class="text-center mb-6">
+                <div class="mb-4">
+                    <img id="modal-image" 
+                         class="radical-image mx-auto mb-4 hidden" 
+                         loading="lazy"
+                         onerror="this.style.display='none'" />
+                </div>
+                <div id="modal-hanzi" class="hanzi-large mb-4">一</div>
+                <div class="space-y-2">
+                    <p><span class="font-semibold">Name:</span> <span id="modal-name">Nhất</span></p>
+                    <p><span class="font-semibold">Pinyin:</span> <span id="modal-pinyin">yī</span> 
+                        <button onclick="speakPinyin()" class="ml-2 text-indigo-600 hover:text-indigo-800 text-sm">🔊</button>
+                    </p>
+                    <p><span class="font-semibold">Meaning:</span> <span id="modal-meaning">one</span></p>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-3">Character Examples:</h4>
+                <div id="modal-examples" class="flex flex-wrap gap-2">
+                    <!-- Examples will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
