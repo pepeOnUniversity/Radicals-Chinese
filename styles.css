@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body { 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden;
+}
+
+/* Gradient Backgrounds and Text */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes spin {
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
+/* Typography */
+.hanzi-large {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+/* Quiz Styles */
+.quiz-option {
+    transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+    background-color: #f3f4f6;
+    border-color: #667eea;
+}
+
+.quiz-option.selected {
+    background-color: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.quiz-option.correct {
+    background-color: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.quiz-option.incorrect {
+    background-color: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+/* Radical Image Styles */
+.radical-image {
+    width: 100px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.radical-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.radical-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    margin-bottom: 1rem;
+}
+
+.radical-image-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    border-top-color: #6366f1;
+    animation: spin 1s linear infinite;
+}
+
+/* Radical Card Layout */
+.radical-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 280px;
+    transition: all 0.3s ease;
+    align-self: stretch;
+}
+
+.radical-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+}
+
+.radical-header {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.radical-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.radical-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+.radical-card:hover .radical-image {
+    transform: scale(1.08);
+}
+
+/* Grid Layout */
+#radicals-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
+}
