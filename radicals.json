@@ -4,12 +4,12 @@
         "hanzi": "人",
         "name": "Nhân",
         "pinyin": "rén",
-        "meaning": "person",
+        "meaning": "người",
         "examples": [
-            "他",
-            "你",
-            "从",
-            "众"
+            "他: /tā/ - anh ấy",
+            "你: /nǐ/ - bạn",
+            "从: /cóng/ - từ, theo",
+            "众: /zhòng/ - đám đông"
         ],
         "image": "/assets/img/bo-nhan/人-order.gif",
         "illustration": "/assets/img/bo-nhan/file.svg"
@@ -19,12 +19,12 @@
         "hanzi": "刀",
         "name": "Đao",
         "pinyin": "dāo",
-        "meaning": "knife",
+        "meaning": "dao, kiếm",
         "examples": [
-            "分",
-            "切",
-            "列",
-            "初"
+            "分: /fēn/ - chia, phân",
+            "切: /qiē/ - cắt",
+            "列: /liè/ - hàng, dãy",
+            "初: /chū/ - ban đầu"
         ],
         "image": "/assets/img/bo-dao/刀-order.gif",
         "illustration": "/assets/img/bo-dao/file.svg"
@@ -34,14 +34,119 @@
         "hanzi": "力",
         "name": "Lực",
         "pinyin": "lì",
-        "meaning": "power",
+        "meaning": "sức mạnh",
         "examples": [
-            "助",
-            "動",
-            "努",
-            "功"
+            "助: /zhù/ - giúp đỡ",
+            "動: /dòng/ - chuyển động",
+            "努: /nǔ/ - cố gắng",
+            "功: /gōng/ - công lao"
         ],
         "image": "/assets/img/bo-luc/力-order.gif",
         "illustration": "/assets/img/bo-luc/file.svg"
+    },
+    {
+        "id": 4,
+        "hanzi": "口",
+        "name": "Khẩu",
+        "pinyin": "kǒu",
+        "meaning": "miệng",
+        "examples": [
+            "吃: /chī/ - ăn",
+            "唱: /chàng/ - hát",
+            "問: /wèn/ - hỏi",
+            "品: /pǐn/ - phẩm chất"
+        ],
+        "image": "/assets/img/bo-khau/口-order.gif",
+        "illustration": "/assets/img/bo-khau/file.svg"
+    },
+    {
+        "id": 5,
+        "hanzi": "囗",
+        "name": "Vi",
+        "pinyin": "wéi",
+        "meaning": "bao quanh",
+        "examples": [
+            "国: /guó/ - quốc gia",
+            "園: /yuán/ - vườn",
+            "圖: /tú/ - bản đồ",
+            "圍: /wéi/ - bao vây"
+        ],
+        "image": "/assets/img/bo-vi/囗-order.gif",
+        "illustration": "/assets/img/bo-vi/file.svg"
+    },
+    {
+        "id": 6,
+        "hanzi": "土",
+        "name": "Thổ",
+        "pinyin": "tǔ",
+        "meaning": "đất",
+        "examples": [
+            "地: /dì/ - đất, mặt đất",
+            "城: /chéng/ - thành phố",
+            "場: /chǎng/ - sân, nơi",
+            "坡: /pō/ - dốc"
+        ],
+        "image": "/assets/img/bo-tho/土-order.gif",
+        "illustration": "/assets/img/bo-tho/file.svg"
+    },
+    {
+        "id": 7,
+        "hanzi": "大",
+        "name": "Đại",
+        "pinyin": "dà",
+        "meaning": "to lớn",
+        "examples": [
+            "天: /tiān/ - trời",
+            "太: /tài/ - quá, rất",
+            "犬: /quǎn/ - chó",
+            "奈: /nài/ - chịu đựng"
+        ],
+        "image": "/assets/img/bo-dai/大-order.gif",
+        "illustration": "/assets/img/bo-dai/file.svg"
+    },
+    {
+        "id": 8,
+        "hanzi": "女",
+        "name": "Nữ",
+        "pinyin": "nǚ",
+        "meaning": "phụ nữ",
+        "examples": [
+            "好: /hǎo/ - tốt, đẹp",
+            "妈: /mā/ - mẹ",
+            "姐: /jiě/ - chị gái",
+            "妹: /mèi/ - em gái"
+        ],
+        "image": "/assets/img/bo-nu/女-order.gif",
+        "illustration": "/assets/img/bo-nu/file.svg"
+    },
+    {
+        "id": 9,
+        "hanzi": "宀",
+        "name": "Miên",
+        "pinyin": "mián",
+        "meaning": "mái nhà",
+        "examples": [
+            "家: /jiā/ - nhà",
+            "安: /ān/ - yên bình",
+            "室: /shì/ - phòng",
+            "宿: /sù/ - trú lại"
+        ],
+        "image": "/assets/img/bo-mien/宀-order.gif",
+        "illustration": "/assets/img/bo-mien/file.svg"
+    },
+    {
+        "id": 10,
+        "hanzi": "山",
+        "name": "Sơn",
+        "pinyin": "shān",
+        "meaning": "núi",
+        "examples": [
+            "峰: /fēng/ - đỉnh núi",
+            "岩: /yán/ - vách đá",
+            "島: /dǎo/ - hòn đảo",
+            "崇: /chóng/ - cao, tôn trọng"
+        ],
+        "image": "/assets/img/bo-son/山-order.gif",
+        "illustration": "/assets/img/bo-son/file.svg"
     }
 ]
