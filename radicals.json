@@ -1,44 +1,47 @@
 [
-  {
-      "id": 1,
-      "hanzi": "一",
-      "name": "Nhất",
-      "pinyin": "yī",
-      "meaning": "one",
-      "examples": [
-          "三",
-          "十",
-          "上",
-          "下"
-      ],
-      "image": "/assets/img/Bo-nhat-一.gif"
-  },
-  {
-      "id": 2,
-      "hanzi": "丶",
-      "name": "Chủ",
-      "pinyin": "zhǔ",
-      "meaning": "dot",
-      "examples": [
-          "主",
-          "丸",
-          "为",
-          "义"
-      ],
-      "image": "/assets/img/Bo-chu-丶.gif"
-  },
-  {
-      "id": 3,
-      "hanzi": "丿",
-      "name": "Phiệt",
-      "pinyin": "piē",
-      "meaning": "slash",
-      "examples": [
-          "久",
-          "么",
-          "义",
-          "乃"
-      ],
-      "image": "/assets/img/Bo-phiet-丿.gif"
-  }
+    {
+        "id": 1,
+        "hanzi": "人",
+        "name": "Nhân",
+        "pinyin": "rén",
+        "meaning": "person",
+        "examples": [
+            "他",
+            "你",
+            "从",
+            "众"
+        ],
+        "image": "/assets/img/bo-nhan/人-order.gif",
+        "illustration": "/assets/img/bo-nhan/file.svg"
+    },
+    {
+        "id": 2,
+        "hanzi": "刀",
+        "name": "Đao",
+        "pinyin": "dāo",
+        "meaning": "knife",
+        "examples": [
+            "分",
+            "切",
+            "列",
+            "初"
+        ],
+        "image": "/assets/img/bo-dao/刀-order.gif",
+        "illustration": "/assets/img/bo-dao/file.svg"
+    },
+    {
+        "id": 3,
+        "hanzi": "力",
+        "name": "Lực",
+        "pinyin": "lì",
+        "meaning": "power",
+        "examples": [
+            "助",
+            "動",
+            "努",
+            "功"
+        ],
+        "image": "/assets/img/bo-luc/力-order.gif",
+        "illustration": "/assets/img/bo-luc/file.svg"
+    }
 ]
