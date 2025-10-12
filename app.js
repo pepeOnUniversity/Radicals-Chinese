@@ -25,7 +25,8 @@ async function loadRadicals() {
         }
         radicals = await response.json();
         console.log('Radicals loaded successfully:', radicals.length, 'items');
-        console.log('Radicals with images:', radicals.filter(r => r.image).length);
+        console.log('Radicals with GIFs:', radicals.filter(r => r.image).length);
+        console.log('Radicals with illustrations:', radicals.filter(r => r.illustration).length);
         displayRadicals(radicals);
         hideLoading();
     } catch (error) {
@@ -181,14 +182,28 @@ function showRadicalDetails(radicalId) {
     document.getElementById('modal-pinyin').textContent = radical.pinyin;
     document.getElementById('modal-meaning').textContent = radical.meaning;
     
-    // Update modal image if available
+    // Update modal images - prioritize illustration over GIF
+    const modalIllustration = document.getElementById('modal-illustration');
     const modalImage = document.getElementById('modal-image');
-    if (radical.image) {
+    
+    if (radical.illustration) {
+        // Show illustration image and hide GIF
+        modalIllustration.src = radical.illustration;
+        modalIllustration.alt = radical.name + ' radical illustration';
+        modalIllustration.classList.remove('hidden');
+        modalImage.classList.add('hidden');
+        console.log('Showing illustration for radical:', radical.hanzi);
+    } else if (radical.image) {
+        // Show GIF image and hide illustration
         modalImage.src = radical.image;
         modalImage.alt = radical.name + ' radical';
         modalImage.classList.remove('hidden');
+        modalIllustration.classList.add('hidden');
+        console.log('Showing GIF for radical:', radical.hanzi);
     } else {
+        // Hide both images
         modalImage.classList.add('hidden');
+        modalIllustration.classList.add('hidden');
     }
     
     // Update examples
