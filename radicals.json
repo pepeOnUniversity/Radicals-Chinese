@@ -148,5 +148,80 @@
         ],
         "image": "/assets/img/bo-son/山-order.gif",
         "illustration": "/assets/img/bo-son/file.svg"
+    },
+    {
+        "id": 11,
+        "hanzi": "巾",
+        "name": "Cân",
+        "pinyin": "jīn",
+        "meaning": "khăn vải",
+        "examples": [
+            "帆: /fān/ - buồm",
+            "帽: /mào/ - mũ",
+            "帳: /zhàng/ - màn, trướng",
+            "帥: /shuài/ - đẹp trai, tướng soái"
+        ],
+        "image": "/assets/img/bo-can/巾-order.gif",
+        "illustration": "/assets/img/bo-can/file.svg"
+    },
+    {
+        "id": 12,
+        "hanzi": "广",
+        "name": "Nghiễm",
+        "pinyin": "guǎng",
+        "meaning": "mái nhà, chỗ ở",
+        "examples": [
+            "店: /diàn/ - cửa hàng",
+            "府: /fǔ/ - phủ, dinh thự",
+            "庙: /miào/ - miếu",
+            "庫: /kù/ - kho chứa"
+        ],
+        "image": "/assets/img/bo-nghiem/广-order.gif",
+        "illustration": "/assets/img/bo-nghiem/file.svg"
+    },
+    {
+        "id": 13,
+        "hanzi": "彳",
+        "name": "Xích",
+        "pinyin": "chì",
+        "meaning": "bước chân trái",
+        "examples": [
+            "往: /wǎng/ - đi, hướng tới",
+            "得: /dé/ - được, đạt",
+            "後: /hòu/ - sau, phía sau",
+            "彼: /bǐ/ - bên kia"
+        ],
+        "image": "/assets/img/bo-xich/彳-order.gif",
+        "illustration": "/assets/img/bo-xich/file.svg"
+    },
+    {
+        "id": 14,
+        "hanzi": "心",
+        "name": "Tâm",
+        "pinyin": "xīn",
+        "meaning": "trái tim, tấm lòng",
+        "examples": [
+            "想: /xiǎng/ - nghĩ",
+            "怕: /pà/ - sợ",
+            "忘: /wàng/ - quên",
+            "急: /jí/ - gấp, lo lắng"
+        ],
+        "image": "/assets/img/bo-tam/心-order.gif",
+        "illustration": "/assets/img/bo-tam/file.svg"
+    },
+    {
+        "id": 15,
+        "hanzi": "手",
+        "name": "Thủ",
+        "pinyin": "shǒu",
+        "meaning": "tay",
+        "examples": [
+            "打: /dǎ/ - đánh",
+            "拿: /ná/ - cầm, nắm",
+            "把: /bǎ/ - cầm, nắm lấy",
+            "推: /tuī/ - đẩy"
+        ],
+        "image": "/assets/img/bo-thu/手-order.gif",
+        "illustration": "/assets/img/bo-thu/file.svg"
     }
 ]
