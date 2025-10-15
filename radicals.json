@@ -223,5 +223,80 @@
         ],
         "image": "/assets/img/bo-thu/手-order.gif",
         "illustration": "/assets/img/bo-thu/file.svg"
+    },
+    {
+        "id": 16,
+        "hanzi": "攴",
+        "name": "Phộc",
+        "pinyin": "pū",
+        "meaning": "đánh nhẹ",
+        "examples": [
+            "教: jiào - dạy",
+            "救: jiù - cứu",
+            "敬: jìng - kính",
+            "散: sàn - tản"
+        ],
+        "image": "/assets/img/bo-phoc/攴-order.gif",
+        "illustration": "/assets/img/bo-phoc/file.svg"
+    },
+    {
+        "id": 17,
+        "hanzi": "日",
+        "name": "Nhật",
+        "pinyin": "rì",
+        "meaning": "mặt trời",
+        "examples": [
+            "明: míng - sáng",
+            "時: shí - thời gian",
+            "早: zǎo - sớm",
+            "晩: wǎn - tối"
+        ],
+        "image": "/assets/img/bo-nhat/日-order.gif",
+        "illustration": "/assets/img/bo-nhat/file.svg"
+    },
+    {
+        "id": 18,
+        "hanzi": "木",
+        "name": "Mộc",
+        "pinyin": "mù",
+        "meaning": "cây",
+        "examples": [
+            "林: lín - rừng",
+            "板: bǎn - ván",
+            "材: cái - gỗ",
+            "村: cūn - làng"
+        ],
+        "image": "/assets/img/bo-moc/木-order.gif",
+        "illustration": "/assets/img/bo-moc/file.svg"
+    },
+    {
+        "id": 19,
+        "hanzi": "水",
+        "name": "Thuỷ",
+        "pinyin": "shuǐ",
+        "meaning": "nước",
+        "examples": [
+            "河: hé - sông",
+            "海: hǎi - biển",
+            "洋: yáng - đại dương",
+            "泉: quán - suối"
+        ],
+        "image": "/assets/img/bo-thuy/水-order.gif",
+        "illustration": "/assets/img/bo-thuy/file.svg"
+    },
+    {
+        "id": 20,
+        "hanzi": "火",
+        "name": "Hoả",
+        "pinyin": "huǒ",
+        "meaning": "lửa",
+        "examples": [
+            "炎: yán - viêm",
+            "焼: shāo - đốt",
+            "照: zhào - chiếu sáng",
+            "灯: dēng - đèn"
+        ],
+        "image": "/assets/img/bo-hoa/火-order.gif",
+        "illustration": "/assets/img/bo-hoa/file.svg"
     }
 ]
