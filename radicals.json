@@ -298,5 +298,80 @@
         ],
         "image": "/assets/img/bo-hoa/火-order.gif",
         "illustration": "/assets/img/bo-hoa/file.svg"
+    },
+    {
+        "id": 21,
+        "hanzi": "牛",
+        "name": "Ngưu",
+        "pinyin": "niú",
+        "meaning": "trâu bò",
+        "examples": [
+            "物: wù - vật",
+            "特: tè - đặc biệt",
+            "牧: mù - chăn nuôi",
+            "牲: shēng - gia súc"
+        ],
+        "image": "/assets/img/bo-nguu/牛-order.gif",
+        "illustration": "/assets/img/bo-nguu/file.svg"
+    },
+    {
+        "id": 22,
+        "hanzi": "犬",
+        "name": "Khuyển",
+        "pinyin": "quǎn",
+        "meaning": "chó",
+        "examples": [
+            "狗: gǒu - chó",
+            "獄: yù - ngục tù",
+            "猶: yóu - vẫn còn",
+            "猛: měng - mãnh liệt"
+        ],
+        "image": "/assets/img/bo-khuyen/犬-order.gif",
+        "illustration": "/assets/img/bo-khuyen/file.svg"
+    },
+    {
+        "id": 23,
+        "hanzi": "玉",
+        "name": "Ngọc",
+        "pinyin": "yù",
+        "meaning": "ngọc",
+        "examples": [
+            "珍: zhēn - trân quý",
+            "現: xiàn - hiện ra",
+            "理: lǐ - lý lẽ",
+            "球: qiú - quả cầu"
+        ],
+        "image": "/assets/img/bo-ngoc/玉-order.gif",
+        "illustration": "/assets/img/bo-ngoc/file.svg"
+    },
+    {
+        "id": 24,
+        "hanzi": "田",
+        "name": "Điền",
+        "pinyin": "tián",
+        "meaning": "ruộng",
+        "examples": [
+            "男: nán - nam",
+            "界: jiè - thế giới",
+            "留: liú - lưu lại",
+            "画: huà - vẽ"
+        ],
+        "image": "/assets/img/bo-dien/田-order.gif",
+        "illustration": "/assets/img/bo-dien/file.svg"
+    },
+    {
+        "id": 25,
+        "hanzi": "疒",
+        "name": "Nạch",
+        "pinyin": "nè",
+        "meaning": "bệnh tật",
+        "examples": [
+            "病: bìng - bệnh",
+            "痛: tòng - đau đớn",
+            "療: liáo - trị liệu",
+            "疲: pí - mệt mỏi"
+        ],
+        "image": "/assets/img/bo-nach/疒-order.gif",
+        "illustration": "/assets/img/bo-nach/file.svg"
     }
 ]
