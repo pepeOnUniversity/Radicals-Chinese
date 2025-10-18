@@ -248,7 +248,7 @@
                         <div class="text-6xl mb-6">🎯</div>
                         <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Test Your Knowledge?</h2>
                         <p class="text-gray-600 mb-8">
-                            You'll be shown 10 random radicals. For each one, identify the correct meaning from 4
+                            You'll be shown <span class="amount-quiz">20</span> random radicals. For each one, identify the correct meaning from 4
                             options.
                         </p>
                         <button onclick="startQuiz()"
@@ -264,9 +264,9 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-2">
                             <span class="text-sm font-medium text-gray-700">Question <span
-                                    id="current-question">1</span> of 10</span>
+                                    id="current-question">1</span> of <span class="show-again-amount-quiz"></span></span>
                             <span class="text-sm font-medium text-gray-700">Score: <span
-                                    id="current-score">0</span>/10</span>
+                                    id="current-score">0</span>/<span class="show-again-amount-quiz"></span></span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div id="progress-bar" class="gradient-bg h-2 rounded-full transition-all duration-500"
