@@ -7,9 +7,10 @@ let currentQuiz = {
     selectedAnswer: null
 };
 let currentModal = null;
+let amountQuiz = parseInt(document.querySelector(".amount-quiz").innerHTML);
 
 // Initialize the app
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadRadicals();
     setupEventListeners();
     showSection('home'); // Default to home section
@@ -36,24 +37,26 @@ async function loadRadicals() {
     }
 }
 
+
+
 // Setup event listeners
 function setupEventListeners() {
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', function() {
+
+    mobileMenuBtn.addEventListener('click', function () {
         mobileMenu.classList.toggle('hidden');
     });
 
     // Search functionality
     const searchInput = document.getElementById('search-input');
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         const query = this.value.toLowerCase().trim();
         if (query === '') {
             displayRadicals(radicals);
         } else {
-            const filtered = radicals.filter(radical => 
+            const filtered = radicals.filter(radical =>
                 radical.hanzi.toLowerCase().includes(query) ||
                 radical.name.toLowerCase().includes(query) ||
                 radical.meaning.toLowerCase().includes(query) ||
@@ -64,7 +67,7 @@ function setupEventListeners() {
     });
 
     // Close modal when clicking outside
-    document.getElementById('radical-modal').addEventListener('click', function(e) {
+    document.getElementById('radical-modal').addEventListener('click', function (e) {
         if (e.target === this) {
             closeModal();
         }
@@ -72,7 +75,7 @@ function setupEventListeners() {
 
     // Close mobile menu when clicking navigation items
     document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.add('hidden');
         });
     });
@@ -96,7 +99,7 @@ function showSection(sectionName) {
 
     // Highlight current nav button
     document.querySelectorAll('.nav-btn').forEach(btn => {
-        if (btn.textContent.toLowerCase() === sectionName || 
+        if (btn.textContent.toLowerCase() === sectionName ||
             (sectionName === 'home' && btn.textContent === 'Home') ||
             (sectionName === 'radicals' && btn.textContent === 'Radicals') ||
             (sectionName === 'quiz' && btn.textContent === 'Quiz')) {
@@ -123,7 +126,7 @@ function displayRadicals(radicalsToShow) {
     }
 
     noResults.classList.add('hidden');
-    
+
     grid.innerHTML = radicalsToShow.map(radical => `
         <div class="bg-white rounded-xl shadow-sm p-6 card-hover cursor-pointer transition-all duration-300 animate-fade-in radical-card" 
              onclick="showRadicalDetails(${radical.id})">
@@ -175,17 +178,17 @@ function showRadicalDetails(radicalId) {
     if (!radical) return;
 
     currentModal = radical;
-    
+
     // Update modal content
     document.getElementById('modal-hanzi').textContent = radical.hanzi;
     document.getElementById('modal-name').textContent = radical.name;
     document.getElementById('modal-pinyin').textContent = radical.pinyin;
     document.getElementById('modal-meaning').textContent = radical.meaning;
-    
+
     // Update modal images - prioritize illustration over GIF
     const modalIllustration = document.getElementById('modal-illustration');
     const modalImage = document.getElementById('modal-image');
-    
+
     if (radical.illustration) {
         // Show illustration image and hide GIF
         modalIllustration.src = radical.illustration;
@@ -205,16 +208,16 @@ function showRadicalDetails(radicalId) {
         modalImage.classList.add('hidden');
         modalIllustration.classList.add('hidden');
     }
-    
+
     // Update examples
     const examplesContainer = document.getElementById('modal-examples');
-    examplesContainer.innerHTML = radical.examples.map(example => 
+    examplesContainer.innerHTML = radical.examples.map(example =>
         `<span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-lg text-lg font-medium">${example}</span>`
     ).join('');
-    
+
     // Show modal
     document.getElementById('radical-modal').classList.remove('hidden');
-    
+
     // Add animation
     setTimeout(() => {
         document.querySelector('#radical-modal .bg-white').classList.add('animate-fade-in');
@@ -230,23 +233,23 @@ function closeModal() {
 // Text-to-speech for pinyin
 function speakPinyin() {
     if (!currentModal) return;
-    
+
     if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(currentModal.pinyin);
         utterance.lang = 'zh-CN';
         utterance.rate = 0.8;
         utterance.pitch = 1;
-        
+
         // Try to use a Chinese voice if available
         const voices = speechSynthesis.getVoices();
-        const chineseVoice = voices.find(voice => 
+        const chineseVoice = voices.find(voice =>
             voice.lang.includes('zh') || voice.lang.includes('cmn')
         );
-        
+
         if (chineseVoice) {
             utterance.voice = chineseVoice;
         }
-        
+
         speechSynthesis.speak(utterance);
     } else {
         alert('Speech synthesis is not supported in your browser.');
@@ -259,7 +262,7 @@ function resetQuiz() {
     document.getElementById('quiz-start').classList.remove('hidden');
     document.getElementById('quiz-questions').classList.add('hidden');
     document.getElementById('quiz-results').classList.add('hidden');
-    
+
     // Reset quiz state
     currentQuiz = {
         questions: [],
@@ -269,6 +272,11 @@ function resetQuiz() {
     };
 }
 
+//display amount quiz
+document.querySelectorAll(".show-again-amount-quiz").forEach(el => {
+    el.innerHTML = amountQuiz;
+})
+
 function startQuiz() {
     if (radicals.length === 0) {
         alert('Please wait for radicals to load before starting the quiz.');
@@ -277,7 +285,7 @@ function startQuiz() {
 
     // Generate 10 random questions
     const shuffled = [...radicals].sort(() => Math.random() - 0.5);
-    currentQuiz.questions = shuffled.slice(0, Math.min(10, radicals.length));
+    currentQuiz.questions = shuffled.slice(0, Math.min(amountQuiz, radicals.length));
     currentQuiz.currentIndex = 0;
     currentQuiz.score = 0;
     currentQuiz.selectedAnswer = null;
@@ -298,7 +306,7 @@ function loadQuestion() {
     // Update progress
     document.getElementById('current-question').textContent = currentQuiz.currentIndex + 1;
     document.getElementById('current-score').textContent = currentQuiz.score;
-    document.getElementById('progress-bar').style.width = `${((currentQuiz.currentIndex + 1) / 10) * 100}%`;
+    document.getElementById('progress-bar').style.width = `${((currentQuiz.currentIndex + 1) / amountQuiz) * 100}%`;
 
     // Update question display
     document.getElementById('question-hanzi').textContent = question.hanzi;
@@ -339,7 +347,7 @@ function selectAnswer(answer, buttonElement) {
     document.querySelectorAll('.quiz-option').forEach(btn => {
         btn.disabled = true;
         const btnAnswer = btn.textContent.trim();
-        
+
         if (btnAnswer === correctAnswer) {
             btn.classList.add('correct');
         } else if (btn === buttonElement && btnAnswer !== correctAnswer) {
@@ -361,7 +369,7 @@ function selectAnswer(answer, buttonElement) {
 
 function nextQuestion() {
     currentQuiz.currentIndex++;
-    
+
     if (currentQuiz.currentIndex >= currentQuiz.questions.length) {
         showQuizResults();
     } else {
@@ -372,7 +380,7 @@ function nextQuestion() {
 function showQuizResults() {
     // Hide questions screen
     document.getElementById('quiz-questions').classList.add('hidden');
-    
+
     // Show results screen
     document.getElementById('quiz-results').classList.remove('hidden');
 
@@ -427,17 +435,17 @@ function showError(message) {
 }
 
 // Ensure voices are loaded for speech synthesis
-window.speechSynthesis.onvoiceschanged = function() {
+window.speechSynthesis.onvoiceschanged = function () {
     // This event fires when voices are loaded
 };
 
 // Keyboard navigation
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     // Close modal with Escape key
     if (e.key === 'Escape' && !document.getElementById('radical-modal').classList.contains('hidden')) {
         closeModal();
     }
-    
+
     // Navigation with number keys
     if (e.key >= '1' && e.key <= '3') {
         const sections = ['home', 'radicals', 'quiz'];
@@ -459,11 +467,11 @@ function addPolishEffects() {
     // Add pulse effect to call-to-action buttons
     const ctaButtons = document.querySelectorAll('.gradient-bg');
     ctaButtons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
-        
-        button.addEventListener('mouseleave', function() {
+
+        button.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -474,7 +482,7 @@ document.addEventListener('DOMContentLoaded', addPolishEffects);
 
 // Service worker registration for offline capability (optional enhancement)
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         // We're not implementing a full service worker here, but this is where you would register one
         // for offline functionality
     });
