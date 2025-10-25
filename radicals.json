@@ -373,5 +373,80 @@
         ],
         "image": "/assets/img/bo-nach/疒-order.gif",
         "illustration": "/assets/img/bo-nach/file.svg"
+    },
+    {
+        "id": 26,
+        "hanzi": "目",
+        "name": "Mục",
+        "pinyin": "mù",
+        "meaning": "mắt",
+        "examples": [
+            "相: xiāng - tương tự",
+            "看: kàn - nhìn",
+            "眠: mián - ngủ",
+            "眼: yǎn - con mắt"
+        ],
+        "image": "/assets/img/bo-muc/目-order.gif",
+        "illustration": "/assets/img/bo-muc/file.svg"
+    },
+    {
+        "id": 27,
+        "hanzi": "石",
+        "name": "Thạch",
+        "pinyin": "shí",
+        "meaning": "đá",
+        "examples": [
+            "破: pò - vỡ",
+            "砂: shā - cát",
+            "碑: bēi - bia đá",
+            "研: yán - nghiên cứu"
+        ],
+        "image": "/assets/img/bo-thach/石-order.gif",
+        "illustration": "/assets/img/bo-thach/file.svg"
+    },
+    {
+        "id": 28,
+        "hanzi": "禾",
+        "name": "Hòa",
+        "pinyin": "hé",
+        "meaning": "lúa",
+        "examples": [
+            "香: xiāng - hương thơm",
+            "秋: qiū - mùa thu",
+            "種: zhǒng - giống, loại",
+            "程: chéng - quá trình"
+        ],
+        "image": "/assets/img/bo-hoaf/禾-order.gif",
+        "illustration": "/assets/img/bo-hoaf/file.svg"
+    },
+    {
+        "id": 29,
+        "hanzi": "竹",
+        "name": "Trúc",
+        "pinyin": "zhú",
+        "meaning": "tre trúc",
+        "examples": [
+            "筆: bǐ - bút",
+            "等: děng - đợi, hạng",
+            "箱: xiāng - hòm, hộp",
+            "笑: xiào - cười"
+        ],
+        "image": "/assets/img/bo-truc/竹-order.gif",
+        "illustration": "/assets/img/bo-truc/file.svg"
+    },
+    {
+        "id": 30,
+        "hanzi": "米",
+        "name": "Mễ",
+        "pinyin": "mǐ",
+        "meaning": "gạo",
+        "examples": [
+            "粉: fěn - bột",
+            "糖: táng - đường",
+            "料: liào - nguyên liệu",
+            "精: jīng - tinh chất"
+        ],
+        "image": "/assets/img/bo-me/米-order.gif",
+        "illustration": "/assets/img/bo-me/file.svg"
     }
 ]
